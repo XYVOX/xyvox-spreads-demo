@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: core-backend
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xyvox-spreads
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  security:
+    user:
+      name: user
+      password: password
+
+
+
+application:
+  security:
+    jwt:
+      secret-key: c4842cb9705e12e195818842e1326cf2fe0115c71a7b87aca24eed3c70365a66
+      expiration: 86400000
+
+
+
+
