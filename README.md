@@ -19,7 +19,11 @@
 ---
 
 ##  Live Demo
-https://github.com/Bulochk1n/xyvox-spreads-demo/blob/main/docs/xyvox-spreads-preview.mp4
+
+
+
+https://github.com/user-attachments/assets/5181e991-b0a9-477f-b2d7-3fc8a18618c1
+
 
 ---
 
@@ -30,6 +34,7 @@ The system is designed for **low-latency** processing of market data from 6+ maj
 ```mermaid
 graph TD
     subgraph "Data Ingestion Layer (Node.js)"
+    
         A[Mock Binance] -->|JSON| R[Redis Pub/Sub]
         B[Mock Bybit] -->|JSON| R
         C[Mock Gate.io] -->|JSON| R
@@ -83,11 +88,15 @@ You can run the full stack locally with a single command. No configuration or AP
 ###Installation
 
 1. Clone the repository:
+```bash
   git clone [https://github.com/Bulochk1n/xyvox-spreads-demo.git](https://github.com/Bulochk1n/xyvox-spreads-demo.git)
   cd xyvox-spreads-demo
+```
 
 2. Start the services:
+```bash
   docker-compose up --build -d
+```
 
   This will spin up Postgres, Redis, the Java Backend, 6 Node.js mock workers, and the Frontend Nginx.
 
