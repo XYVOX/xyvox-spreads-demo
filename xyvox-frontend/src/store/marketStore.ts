@@ -249,8 +249,8 @@ export const useMarketStore = create<MarketState>((set, get) => {
             const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
             const host = window.location.host;
 
-            const wsUrl = import.meta.env.PROD
-                ? `${protocol}//${host}/ws-arbitrage/websocket`
+           const wsUrl = import.meta.env.PROD
+                ? 'wss://api.xyvox.xyz/ws-arbitrage/websocket'
                 : 'ws://localhost:8080/ws-arbitrage/websocket';
 
             client = new Client({
